@@ -62,8 +62,8 @@ public class Server {
 				while ((line = in.readLine()) != null) {
 					System.out.printf("String enviada: " + line + "\n");
 					System.out.println("Resultado da operação: \n");
-					multiplicacao(line);
-					out.println(line);
+					System.out.println(multiplicacao(line));
+					out.println(multiplicacao(line));
 				}
 
 			} catch (IOException e) {
