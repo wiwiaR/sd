@@ -37,7 +37,8 @@ public class Client {
 				out.flush();
 
 				System.out.println("Mensagem enviada: " + vetor);
-				System.out.println("Server replied " + in.readLine());
+				System.out.println("Matriz recebida: " + in.readLine());
+				vetor = "";
 			}
 
 			sc.close();

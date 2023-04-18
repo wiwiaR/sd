@@ -64,6 +64,7 @@ public class Server {
 					System.out.println("Resultado da operação: \n");
 					System.out.println(multiplicacao(line));
 					out.println(multiplicacao(line));
+					line = "";
 				}
 
 			} catch (IOException e) {
@@ -84,7 +85,7 @@ public class Server {
 		}
 	}
 
-	public static void multiplicacao(String vetor) {
+	public static String multiplicacao(String vetor) {
 
 		String aux = vetor.substring(0, vetor.length() - 1);
 
@@ -120,13 +121,15 @@ public class Server {
 				}
 			}
 		}
+		aux = "[ ";
 		for (int i = 0; i < 2; i++) {
 			for (int j = 0; j < 2; j++) {
-				System.out.println(c[i][j]);
+//				System.out.println(c[i][j]);
+				aux += c[i][j] + " ][ ";
 			}
 		}
+		aux = aux.substring(0, aux.length() - 2);
 		
-		aux = c.toString();
-		System.out.println(aux);
+		return aux;
 	}
 }
